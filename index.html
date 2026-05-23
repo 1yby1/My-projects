@@ -149,80 +149,779 @@
     <section id="work" class="py-24 sm:py-32 bg-white relative">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <!-- Section Header -->
-            <div class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
-                <div class="max-w-2xl">
+            <div class="mb-14 md:mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div class="max-w-3xl">
+                    <span class="text-cta font-medium tracking-widest text-sm uppercase mb-4 block">Featured Projects</span>
                     <h2 class="font-heading text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Selected Work.</h2>
-                    <p class="text-lg text-secondary font-light">A collection of recent projects focusing on UI/UX design, web development, and digital experiences.</p>
+                    <p class="text-lg text-secondary font-light leading-relaxed">
+                        用多个完整工程案例展示我在后端架构、前端工程化、AI Agent、安全控制和真实业务链路对接上的实践能力。
+                    </p>
                 </div>
-                <!-- Categories filter (Static UI) -->
                 <div class="flex flex-wrap gap-2">
-                    <button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-medium transition duration-200">All</button>
-                    <button class="px-5 py-2 rounded-full border border-gray-200 text-secondary hover:border-gray-300 hover:text-primary text-sm font-medium transition duration-200 cursor-pointer">Design</button>
-                    <button class="px-5 py-2 rounded-full border border-gray-200 text-secondary hover:border-gray-300 hover:text-primary text-sm font-medium transition duration-200 cursor-pointer">Development</button>
+                    <span class="px-4 py-2 rounded-full bg-primary text-white text-sm font-medium">Full-stack</span>
+                    <span class="px-4 py-2 rounded-full border border-gray-200 text-secondary text-sm font-medium">AI Application</span>
+                    <span class="px-4 py-2 rounded-full border border-gray-200 text-secondary text-sm font-medium">Voice Bot</span>
+                    <span class="px-4 py-2 rounded-full border border-gray-200 text-secondary text-sm font-medium">Ops Agent</span>
+                    <span class="px-4 py-2 rounded-full border border-gray-200 text-secondary text-sm font-medium">Business System</span>
                 </div>
             </div>
 
-            <!-- Project Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                
-                <!-- Project 1 (Large) -->
-                <div class="group relative md:col-span-2 block w-full overflow-hidden rounded-2xl bg-gray-100 cursor-pointer">
-                    <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden">
-                        <!-- Placeholder Image -->
-                        <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=2000" alt="Fintech Dashboard Project" class="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                        
-                        <!-- Overlay -->
-                        <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
-                        <!-- Hover Content -->
-                        <div class="absolute inset-0 p-8 flex flex-col justify-end opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                            <h3 class="font-heading text-3xl md:text-4xl font-bold text-white mb-2">Fintech Dashboard</h3>
-                            <p class="text-white/80 font-light max-w-md mb-4">A comprehensive financial dashboard focusing on data visualization and ease of use.</p>
-                            <span class="inline-flex items-center text-sm font-medium text-white group/link">
-                                View Project 
-                                <svg class="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                            </span>
+            <!-- Featured Project -->
+            <article class="overflow-hidden rounded-2xl border border-gray-200 bg-base shadow-sm">
+                <!-- 顶部 Banner 截图区 -->
+                <div class="relative aspect-[16/9] bg-primary overflow-hidden">
+                    <img src="screenshots/ivr-flow-editor.png" alt="智能 IVR 系统 - 客服首问流程编辑器" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!-- 中段双栏 -->
+                <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr]">
+                    <div class="p-6 sm:p-8 lg:p-10">
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-secondary">Spring Boot 3</span>
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-secondary">Vue 3</span>
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-secondary">Spring AI</span>
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-secondary">FreeSWITCH ESL</span>
+                        </div>
+                        <h3 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5 text-primary">
+                            智能 IVR 语音机器人系统
+                        </h3>
+                        <p class="max-w-2xl text-base sm:text-lg leading-relaxed text-secondary font-light mb-8">
+                            面向客服热线场景开发的智能 IVR 系统，覆盖热线接入、可视化流程编排、流程发布与调试、通话记录追踪、RAG 知识库问答、AI 意图识别、ASR/TTS 语音能力和用户权限管理。
+                        </p>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <div class="rounded-xl border border-gray-200 bg-white p-4">
+                                <p class="text-2xl font-heading font-bold text-primary">5</p>
+                                <p class="mt-1 text-xs text-secondary">后端模块拆分</p>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 bg-white p-4">
+                                <p class="text-2xl font-heading font-bold text-primary">11+</p>
+                                <p class="mt-1 text-xs text-secondary">IVR 节点类型</p>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 bg-white p-4">
+                                <p class="text-2xl font-heading font-bold text-primary">RAG</p>
+                                <p class="mt-1 text-xs text-secondary">知识库问答</p>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 bg-white p-4">
+                                <p class="text-2xl font-heading font-bold text-primary">ESL</p>
+                                <p class="mt-1 text-xs text-secondary">电话事件接入</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 sm:p-8 lg:p-10 lg:border-l lg:border-gray-200">
+                        <div class="mb-8">
+                            <p class="text-sm font-medium uppercase tracking-widest text-cta mb-3">Project Role</p>
+                            <p class="text-2xl font-heading font-semibold text-primary">系统架构设计 / 核心模块开发 / 前后端联调</p>
+                        </div>
+
+                        <div class="mb-8 rounded-xl border border-dashed border-gray-300 bg-gray-50 p-4">
+                            <p class="text-xs font-medium uppercase tracking-widest text-secondary mb-3">项目结果</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">~92%</p>
+                                    <p class="text-xs text-secondary">端到端通话流程成功率（待实测）</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">&lt; 1.8s</p>
+                                    <p class="text-xs text-secondary">AI 首次响应时延（待实测）</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">~40%</p>
+                                    <p class="text-xs text-secondary">流程配置效率提升（待实测）</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-5">
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">多模块后端架构</h4>
+                                <p class="text-sm leading-6 text-secondary">按 admin / engine / ai / call / common 拆分管理后台、流程引擎、AI 能力、呼叫接入和公共能力，提升业务边界清晰度与可维护性。</p>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">IVR 流程执行引擎</h4>
+                                <p class="text-sm leading-6 text-secondary">通过会话状态机处理 answer / dtmf / asr / hangup 等事件，让通话流程支持暂停、恢复、终止和按节点继续执行。</p>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">AI 与电话链路闭环</h4>
+                                <p class="text-sm leading-6 text-secondary">集成 OpenAI 兼容接口、RAG 检索、意图识别和 FreeSWITCH ESL 事件流，实现从来电接入到 AI 问答和转人工的完整闭环。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="group relative block w-full overflow-hidden rounded-2xl bg-gray-100 cursor-pointer">
-                    <div class="aspect-[4/3] sm:aspect-square md:aspect-[4/5] w-full relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&q=80&w=1000" alt="E-commerce App" class="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                        <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute inset-0 p-8 flex flex-col justify-end opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                            <h3 class="font-heading text-2xl font-bold text-white mb-2">Aura E-commerce</h3>
-                            <p class="text-white/80 text-sm font-light mb-4">Minimalist shopping experience.</p>
-                            <span class="inline-flex items-center text-sm font-medium text-white group/link">
-                                View Project <svg class="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                            </span>
+                <div class="border-t border-gray-200 bg-white p-6 sm:p-8 lg:p-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10">
+                        <div>
+                            <h4 class="font-heading text-2xl font-bold text-primary mb-4">Tech Stack</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Java 17</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Spring Boot 3</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Spring AI</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Spring Security</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">MyBatis-Plus</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">MySQL</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Redis</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">FreeSWITCH ESL</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Vue 3</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">TypeScript</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Vite</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Element Plus</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">LogicFlow</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Pinia</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Docker Compose</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-heading text-2xl font-bold text-primary mb-4">Core Contributions</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">可视化流程编辑器</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">基于 LogicFlow 实现节点拖拽、属性配置、连线分支、流程校验、保存发布、版本恢复、AI 生成草稿和可视化调试。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">RAG 知识库问答</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">实现知识库、文档、切片、Embedding 存储与检索，并提供关键词检索兜底机制增强异常场景可用性。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">通话事件追踪</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">处理来电创建、接听、DTMF、挂机、录音结束等事件，将真实电话链路映射到业务流程引擎。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">后台管理与部署</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">完成用户、角色、菜单权限、审计、热线、通话记录、LLM 日志、RAG 评估等模块，并支持 Docker Compose 一键演示。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <details class="mt-10 rounded-xl border border-gray-200 bg-base p-5 open:bg-white transition-colors">
+                        <summary class="cursor-pointer list-none font-heading text-lg font-semibold text-primary flex items-center justify-between gap-4">
+                            <span>查看项目细节</span>
+                            <span class="text-cta text-sm font-body">Case Study</span>
+                        </summary>
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm leading-6 text-secondary">
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">业务闭环</h5>
+                                <p>从热线接入、流程执行、语音识别、AI 判断、知识库问答到转人工，系统围绕客服热线场景形成完整链路。</p>
+                            </div>
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">工程难点</h5>
+                                <p>通话过程是事件驱动且会被用户输入打断，因此通过会话状态机管理运行态，保证流程能够暂停、恢复和正确终止。</p>
+                            </div>
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">可靠性设计</h5>
+                                <p>AI 检索链路加入关键词兜底，运行态数据放入 Redis，并记录 LLM 调用日志与 RAG 评估数据，便于排查和优化。</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="mt-10 overflow-hidden rounded-2xl border border-gray-200 bg-base shadow-sm">
+                <div class="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr]">
+                    <div class="relative min-h-[340px] bg-zinc-950 p-6 sm:p-8 lg:p-10 text-white overflow-hidden">
+                        <div class="absolute inset-0 opacity-25" style="background-image: radial-gradient(#2563EB 1px, transparent 1px); background-size: 28px 28px;"></div>
+                        <div class="relative z-10 flex h-full flex-col justify-between gap-10">
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">FastAPI</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Vue 3</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">DeepSeek / Qwen</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Linux Ops</span>
+                                </div>
+                                <h3 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5">
+                                    安全智能运维 Agent 系统
+                                </h3>
+                                <p class="max-w-2xl text-base sm:text-lg leading-relaxed text-gray-300 font-light">
+                                    面向国产 Linux 运维场景设计的 AI 辅助诊断系统，支持自然语言发起运维请求，由 Agent 自动完成意图识别、工具选择、安全校验、系统感知、结果分析和审计追踪。
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">10+</p>
+                                    <p class="mt-1 text-xs text-gray-400">运维感知工具</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">JSON</p>
+                                    <p class="mt-1 text-xs text-gray-400">模型输出协议</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">RBAC</p>
+                                    <p class="mt-1 text-xs text-gray-400">受控操作权限</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">trace</p>
+                                    <p class="mt-1 text-xs text-gray-400">全链路审计</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 sm:p-8 lg:p-10">
+                        <div class="mb-8">
+                            <p class="text-sm font-medium uppercase tracking-widest text-cta mb-3">Project Role</p>
+                            <p class="text-2xl font-heading font-semibold text-primary">Agent 链路设计 / 安全执行控制 / 前端控制台开发</p>
+                        </div>
+
+                        <div class="mb-8 rounded-xl border border-dashed border-gray-300 bg-gray-50 p-4">
+                            <p class="text-xs font-medium uppercase tracking-widest text-secondary mb-3">项目结果</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">~55%</p>
+                                    <p class="text-xs text-secondary">常见故障定位耗时下降（待实测）</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">&gt; 99%</p>
+                                    <p class="text-xs text-secondary">高风险操作拦截准确率（待实测）</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">3-5 次</p>
+                                    <p class="text-xs text-secondary">单次诊断平均工具调用（待实测）</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-5">
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">Agent 主链路</h4>
+                                <p class="text-sm leading-6 text-secondary">基于 FastAPI 串联请求接收、意图规划、工具执行、结果总结与审计闭环，提供智能诊断、工具调用、安全评估和审计查询接口。</p>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">MCP-like 工具注册</h4>
+                                <p class="text-sm leading-6 text-secondary">统一声明工具元数据、参数 schema 与风险等级，封装系统概览、进程、端口、日志、服务、磁盘等 10+ 个诊断工具。</p>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">安全意图校验</h4>
+                                <p class="text-sm leading-6 text-secondary">围绕工具白名单、危险字符、危险路径、角色权限、受保护服务和受保护进程做多层校验，降低误操作风险。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="group relative block w-full overflow-hidden rounded-2xl bg-gray-100 cursor-pointer">
-                    <div class="aspect-[4/3] sm:aspect-square md:aspect-[4/5] w-full relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1000" alt="Developer Tools" class="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105" loading="lazy">
-                        <div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute inset-0 p-8 flex flex-col justify-end opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                            <h3 class="font-heading text-2xl font-bold text-white mb-2">DevTools Pro</h3>
-                            <p class="text-white/80 text-sm font-light mb-4">Dark mode interface for developers.</p>
-                            <span class="inline-flex items-center text-sm font-medium text-white group/link">
-                                View Project <svg class="w-4 h-4 ml-2 transform group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                            </span>
+                <div class="border-t border-gray-200 bg-white p-6 sm:p-8 lg:p-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10">
+                        <div>
+                            <h4 class="font-heading text-2xl font-bold text-primary mb-4">Tech Stack</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Python</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">FastAPI</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Pydantic</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">SQLite</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Vue 3</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Vite</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">DeepSeek / Qwen API</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">MCP-like Tool Registry</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">subprocess 白名单</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">JSONL 审计日志</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">systemd</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Linux / 麒麟 V11 / LoongArch</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-heading text-2xl font-bold text-primary mb-4">Core Contributions</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">LLM 工具规划</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">接入 DeepSeek / Qwen，设计固定 JSON 输出协议用于工具规划与诊断结论生成，并加入关键词规则兜底。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">受控运维操作</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">实现白名单服务重启、非系统进程终止和安全临时目录清理，加入 operator/admin 角色校验、二次确认与 dry-run 预览。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">审计追踪链路</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">为每次请求生成 trace_id，记录 LLM 决策、安全校验、工具调用、环境感知、执行结果和最终回答。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">运维控制台</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">开发智能运维对话、系统状态看板、MCP 工具列表和审计日志查询页面，可视化展示 Agent 执行过程。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <details class="mt-10 rounded-xl border border-gray-200 bg-base p-5 open:bg-white transition-colors">
+                        <summary class="cursor-pointer list-none font-heading text-lg font-semibold text-primary flex items-center justify-between gap-4">
+                            <span>查看项目细节</span>
+                            <span class="text-cta text-sm font-body">Case Study</span>
+                        </summary>
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm leading-6 text-secondary">
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">诊断流程</h5>
+                                <p>用户用自然语言描述问题后，Agent 自动完成意图识别、工具选择、参数校验、系统感知、结果分析和最终总结。</p>
+                            </div>
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">安全边界</h5>
+                                <p>所有 subprocess 执行都经过白名单、schema、危险字符、危险路径、角色权限和受保护目标校验，中风险操作必须二次确认。</p>
+                            </div>
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">部署适配</h5>
+                                <p>编写 systemd 部署脚本和低权限运行用户方案，面向麒麟高级服务器 V11 / LoongArch 环境规划最小权限运行。</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="mt-10 overflow-hidden rounded-2xl border border-gray-200 bg-base shadow-sm">
+                <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr]">
+                    <div class="relative min-h-[340px] bg-slate-950 p-6 sm:p-8 lg:p-10 text-white overflow-hidden">
+                        <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(#2563EB 1px, transparent 1px), linear-gradient(90deg, #2563EB 1px, transparent 1px); background-size: 36px 36px;"></div>
+                        <div class="relative z-10 flex h-full flex-col justify-between gap-10">
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Java 21</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Spring Boot 3.5</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">LangChain4j</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">RAG + MCP</span>
+                                </div>
+                                <h3 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5">
+                                    AI-Coder 编程学习与求职助手
+                                </h3>
+                                <p class="max-w-2xl text-base sm:text-lg leading-relaxed text-gray-300 font-light">
+                                    面向程序员学习和求职场景的全栈 AI 助手系统，覆盖多轮会话、知识库检索、工具调用、安全围栏与前后端联动，提供更聚焦、更可落地的问答与建议能力。
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">RAG</p>
+                                    <p class="mt-1 text-xs text-gray-400">垂直知识库问答</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">MCP</p>
+                                    <p class="mt-1 text-xs text-gray-400">模型上下文扩展</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">Memory</p>
+                                    <p class="mt-1 text-xs text-gray-400">会话级上下文隔离</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">Guardrail</p>
+                                    <p class="mt-1 text-xs text-gray-400">输入输出风控</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 sm:p-8 lg:p-10">
+                        <div class="mb-8">
+                            <p class="text-sm font-medium uppercase tracking-widest text-cta mb-3">Project Role</p>
+                            <p class="text-2xl font-heading font-semibold text-primary">全栈架构搭建 / AI Agent 研发 / RAG 与安全机制落地</p>
+                        </div>
+
+                        <div class="mb-8 rounded-xl border border-dashed border-gray-300 bg-gray-50 p-4">
+                            <p class="text-xs font-medium uppercase tracking-widest text-secondary mb-3">项目结果</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">~90%</p>
+                                    <p class="text-xs text-secondary">多轮对话上下文命中率（待实测）</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">~35%</p>
+                                    <p class="text-xs text-secondary">RAG 回答相关性提升（待实测）</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">~2.1s</p>
+                                    <p class="text-xs text-secondary">平均问答响应时延（待实测）</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-5">
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">全栈系统搭建</h4>
+                                <p class="text-sm leading-6 text-secondary">完成前后端分离架构初始化与落地，前端基于 Vue 3 + Vite 构建聊天和登录视图，后端用 Spring Boot 3.5 提供高并发 RESTful API。</p>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">Agent 主链路与持久记忆</h4>
+                                <p class="text-sm leading-6 text-secondary">基于 LangChain4j 接入通义千问与智谱模型，构建 AICoderHelper，并通过 @MemoryId + PersistentChatMemoryStore 实现会话级上下文隔离与多轮对话记忆。</p>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">RAG + MCP + Guardrail</h4>
+                                <p class="text-sm leading-6 text-secondary">打通 Markdown 知识库向量检索、@Tool Function Calling 和 MCP 扩展接入，同时实现 SafeInputGuardrail 与 SafeOutputGuardrail 提升安全与合规性。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-            </div>
-            
-            <div class="mt-16 text-center">
-                <a href="#" class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-primary border border-gray-200 rounded-full hover:bg-gray-50 transition-all duration-300">
-                    View All Works
-                </a>
-            </div>
+                <div class="border-t border-gray-200 bg-white p-6 sm:p-8 lg:p-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10">
+                        <div>
+                            <h4 class="font-heading text-2xl font-bold text-primary mb-4">Tech Stack</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Java 21</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Spring Boot 3.5</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">MySQL 8</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">MyBatis-Plus</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Jsoup</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">LangChain4j</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">RAG</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">MCP</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Function Calling</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">通义千问 DashScope</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">智谱大模型</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Vue 3 (Composition API)</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">TypeScript</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Vite</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-heading text-2xl font-bold text-primary mb-4">Core Contributions</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">垂直场景闭环交付</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">独立完成前端对话 UI、接口联调、后端 LLM 编排与数据库管理，围绕“编程学习与求职”形成端到端可运行系统。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">LangChain4j 工程化实践</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">将提示词、长文本切分、Embedding 检索、Function Calling 和会话记忆进行模块化编排，沉淀可复用 AI 服务链路。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">幻觉抑制与回答质量提升</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">通过 System Prompt 定向约束 + RAG 知识库增强，显著减少泛化回答，在面试八股、简历建议等场景提升准确性与实用性。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">可扩展与安全体系</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">设计 AICodeHelperFactory 与 Tool 插件机制实现能力即插即用，并构建输入输出双向 Guardrail 增强防注入与内容风控能力。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <details class="mt-10 rounded-xl border border-gray-200 bg-base p-5 open:bg-white transition-colors">
+                        <summary class="cursor-pointer list-none font-heading text-lg font-semibold text-primary flex items-center justify-between gap-4">
+                            <span>查看项目细节</span>
+                            <span class="text-cta text-sm font-body">Case Study</span>
+                        </summary>
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm leading-6 text-secondary">
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">知识库构建链路</h5>
+                                <p>自动解析本地高质量 Markdown 文档并向量化入库，覆盖 Java 学习路线、面试题库与求职指南，为问答提供稳定语义支撑。</p>
+                            </div>
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">工具调用与协议扩展</h5>
+                                <p>通过 @Tool 封装面试题库等插件，并接入 MCP 对接外部模型端点，实现更强的上下文延展和外部能力编排。</p>
+                            </div>
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">安全风控机制</h5>
+                                <p>实现用户输入敏感词过滤、长度控制和输出风险拦截，形成 AI 内容安全围栏，提升系统在真实应用场景下的可控性。</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="mt-10 overflow-hidden rounded-2xl border border-gray-200 bg-base shadow-sm">
+                <div class="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr]">
+                    <div class="relative min-h-[340px] bg-neutral-900 p-6 sm:p-8 lg:p-10 text-white overflow-hidden">
+                        <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(135deg, #3F3F46 1px, transparent 1px), linear-gradient(45deg, #3F3F46 1px, transparent 1px); background-size: 32px 32px;"></div>
+                        <div class="relative z-10 flex h-full flex-col justify-between gap-10">
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Spring Boot</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Vue 3</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">UniApp 小程序</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">State Machine</span>
+                                </div>
+                                <h3 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5">
+                                    合同与续费管理系统
+                                </h3>
+                                <p class="max-w-2xl text-base sm:text-lg leading-relaxed text-gray-300 font-light">
+                                    面向 B 端业务的合同全生命周期管理平台，覆盖线上签约、续约流转、状态机驱动、JWT 鉴权、短信验证码登录与多端协同，支持 Web 端与小程序端联合使用。
+                                </p>
+                                <p class="mt-4 text-xs text-gray-400 tracking-wide uppercase">2025.12 – 2026.01 · 项目实训</p>
+                            </div>
+
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">20+</p>
+                                    <p class="mt-1 text-xs text-gray-400">RESTful 接口</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">3</p>
+                                    <p class="mt-1 text-xs text-gray-400">用户权限层级</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">JWT</p>
+                                    <p class="mt-1 text-xs text-gray-400">接口级鉴权</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">2 端</p>
+                                    <p class="mt-1 text-xs text-gray-400">Web + 小程序</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 sm:p-8 lg:p-10">
+                        <div class="mb-8">
+                            <p class="text-sm font-medium uppercase tracking-widest text-cta mb-3">Project Role</p>
+                            <p class="text-2xl font-heading font-semibold text-primary">组长 & 团队核心开发 / 合同与续费模块设计 / 前后端联调</p>
+                        </div>
+
+                        <div class="mb-8 rounded-xl border border-dashed border-gray-300 bg-gray-50 p-4">
+                            <p class="text-xs font-medium uppercase tracking-widest text-secondary mb-3">项目成果</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">+60%</p>
+                                    <p class="text-xs text-secondary">客户续费效率提升</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">-70%</p>
+                                    <p class="text-xs text-secondary">人工合同录入工作量</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">0</p>
+                                    <p class="text-xs text-secondary">系统权限泄露事件</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-5">
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">状态机驱动的合同流转</h4>
+                                <p class="text-sm leading-6 text-secondary">基于状态机思想设计合同签约与续约流程的状态流转模型，对状态变更进行约束校验，避免非法流转导致的数据不一致问题。</p>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">Spring Security + JWT 鉴权</h4>
+                                <p class="text-sm leading-6 text-secondary">编写自定义 Filter 完成 Token 解析与校验，结合权限配置实现接口级访问控制,支撑超级管理员/运营/普通员工三级用户权限体系。</p>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">续约闭环 & 历史可追溯</h4>
+                                <p class="text-sm leading-6 text-secondary">采用"续约生成新合同 + 关联原合同"方案替代直接修改原合同,保证合同历史完整可追溯,降低关键业务数据风险。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-200 bg-white p-6 sm:p-8 lg:p-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10">
+                        <div>
+                            <h4 class="font-heading text-2xl font-bold text-primary mb-4">Tech Stack</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Java</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Spring Boot</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Spring Security</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">JWT</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">MyBatis (XML)</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">MySQL</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Redis</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Maven</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">RESTful API</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Vue 3</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">TypeScript</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Vite</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Vue Router 4</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Pinia</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Axios</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Element Plus</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Tailwind CSS</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Font Awesome</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">UniApp</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-heading text-2xl font-bold text-primary mb-4">Core Contributions</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">核心业务接口设计</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">负责合同管理与续费管理核心业务,累计设计并实现 20+ RESTful 接口,主导前后端联调与功能验收。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">Redis 短信验证码登录</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">使用 Redis + TTL 存储短信验证码完成验证码登录/注册流程,配合 @Valid 参数校验提升接口输入质量。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">统一返回体 & 全局异常</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">采用统一返回体 + @ControllerAdvice 全局异常处理规范接口输出与错误码,降低前端对异常分支的处理复杂度。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">MyBatis 数据持久层</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">基于 MyBatis XML 完成用户表、合同表、续约合同表等核心表的 CRUD 与关联查询,并实现列表分页查询能力。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <details class="mt-10 rounded-xl border border-gray-200 bg-base p-5 open:bg-white transition-colors">
+                        <summary class="cursor-pointer list-none font-heading text-lg font-semibold text-primary flex items-center justify-between gap-4">
+                            <span>查看项目细节</span>
+                            <span class="text-cta text-sm font-body">Case Study</span>
+                        </summary>
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm leading-6 text-secondary">
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">业务闭环交付</h5>
+                                <p>完成合同与续约的全链路闭环流程,支持 Web 端与小程序端使用,按期实训交付,客户续费效率提升 60%,人工合同录入工作量减少 70%。</p>
+                            </div>
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">权限与安全方案</h5>
+                                <p>JWT + Spring Security 鉴权方案落地三级用户权限(超级管理员 / 运营 / 普通员工),系统运行期间未出现权限泄露问题。</p>
+                            </div>
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">数据安全设计</h5>
+                                <p>"续约生成新合同 + 关联原合同"替代直接修改原合同,保证合同历史可追溯;状态机约束 + 参数校验 + 全局异常,降低数据风险。</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </article>
+
+            <!-- Project 5 -->
+            <article class="mt-10 overflow-hidden rounded-2xl border border-gray-200 bg-base shadow-sm">
+                <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr]">
+                    <div class="relative min-h-[340px] bg-stone-900 p-6 sm:p-8 lg:p-10 text-white overflow-hidden">
+                        <div class="absolute inset-0 opacity-15" style="background-image: linear-gradient(90deg, #57534E 1px, transparent 1px); background-size: 24px 24px;"></div>
+                        <div class="relative z-10 flex h-full flex-col justify-between gap-10">
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-8">
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Vue 2</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Element UI</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Spring Boot</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white/80">Component Library</span>
+                                </div>
+                                <h3 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5">
+                                    项目全生命周期管理系统
+                                </h3>
+                                <p class="max-w-2xl text-base sm:text-lg leading-relaxed text-gray-300 font-light">
+                                    面向企业项目全生命周期管理的 Web 平台，覆盖合同管理、周报管理与专题分析三大核心模块，支持多角色权限、员工周报提交与领导审批,提供可复用的前端组件与统一交互体验。
+                                </p>
+                                <p class="mt-4 text-xs text-gray-400 tracking-wide uppercase">2025.05 – 2025.06 · 项目实训</p>
+                            </div>
+
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">3</p>
+                                    <p class="mt-1 text-xs text-gray-400">核心业务模块</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">80%</p>
+                                    <p class="mt-1 text-xs text-gray-400">组件复用率</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">CRUD</p>
+                                    <p class="mt-1 text-xs text-gray-400">周报全流程</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                                    <p class="text-2xl font-heading font-bold">RBAC</p>
+                                    <p class="mt-1 text-xs text-gray-400">多角色权限</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 sm:p-8 lg:p-10">
+                        <div class="mb-8">
+                            <p class="text-sm font-medium uppercase tracking-widest text-cta mb-3">Project Role</p>
+                            <p class="text-2xl font-heading font-semibold text-primary">前端开发主力 / 组件封装 / 管理员前后端联调</p>
+                        </div>
+
+                        <div class="mb-8 rounded-xl border border-dashed border-gray-300 bg-gray-50 p-4">
+                            <p class="text-xs font-medium uppercase tracking-widest text-secondary mb-3">项目成果</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">3 模块</p>
+                                    <p class="text-xs text-secondary">合同 / 周报 / 专题分析交付</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">80%</p>
+                                    <p class="text-xs text-secondary">通用组件复用率</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">GitHub</p>
+                                    <p class="text-xs text-secondary">代码开源可运行测试</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-5">
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">周报模块全流程</h4>
+                                <p class="text-sm leading-6 text-secondary">设计并开发周报模块前端页面,实现周报的新增、编辑、删除、查询能力,并与后端接口完成全流程对接,支持员工提交与领导审批。</p>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">通用组件封装</h4>
+                                <p class="text-sm leading-6 text-secondary">基于 Element UI 抽象通用查询表单与分页表格组件,统一交互与样式规范,组件在多模块中复用率达 80%,显著减少前端冗余代码。</p>
+                            </div>
+                            <div class="rounded-xl border border-gray-200 bg-white p-5">
+                                <h4 class="font-heading text-lg font-semibold text-primary mb-2">管理端前后端协同</h4>
+                                <p class="text-sm leading-6 text-secondary">独立负责管理员页面的前后端实现,围绕多用户权限、模块入口与数据管理设计完整链路,支撑系统的运营后台诉求。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-200 bg-white p-6 sm:p-8 lg:p-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10">
+                        <div>
+                            <h4 class="font-heading text-2xl font-bold text-primary mb-4">Tech Stack</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Vue 2</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Element UI</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Axios</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Node.js</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Java</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Spring Boot</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">MySQL</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">Maven</span>
+                                <span class="px-3 py-1.5 rounded-full bg-gray-100 text-xs font-medium text-secondary">RESTful API</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-heading text-2xl font-bold text-primary mb-4">Core Contributions</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">周报模块前端交付</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">主导周报模块前端页面设计与开发,实现周报增删改查全流程,完成与后端接口的对接与联调。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">管理员页面全栈实现</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">设计并开发管理员页面的前后端能力,串联多用户权限管理与业务模块入口,支撑系统运营场景。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">布局与交互体系</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">负责前端页面布局设计与交互实现,确保各模块视觉一致性与操作流畅度。</p>
+                                </div>
+                                <div class="border-l-2 border-cta pl-4">
+                                    <p class="font-medium text-primary">通用组件抽象</p>
+                                    <p class="mt-1 text-sm leading-6 text-secondary">基于 Element UI 封装通用查询与分页组件,复用率达 80%,有效降低重复代码,提升后续模块迭代效率。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <details class="mt-10 rounded-xl border border-gray-200 bg-base p-5 open:bg-white transition-colors">
+                        <summary class="cursor-pointer list-none font-heading text-lg font-semibold text-primary flex items-center justify-between gap-4">
+                            <span>查看项目细节</span>
+                            <span class="text-cta text-sm font-body">Case Study</span>
+                        </summary>
+                        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm leading-6 text-secondary">
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">业务模块交付</h5>
+                                <p>成功完成合同模块、周报模块、专题分析模块三大核心功能,覆盖合同管理、多用户权限、员工提交周报与领导审批等关键场景。</p>
+                            </div>
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">代码质量优化</h5>
+                                <p>通过通用组件抽象与目录结构梳理,降低代码冗余,提升项目可维护性,为团队成员提供统一的开发范式。</p>
+                            </div>
+                            <div>
+                                <h5 class="font-heading font-semibold text-primary mb-2">开源可运行</h5>
+                                <p>项目代码已上传至 GitHub,具备完整的运行与测试流程,可作为前后端协作的实训样例进行复用。</p>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </article>
         </div>
     </section>
 
